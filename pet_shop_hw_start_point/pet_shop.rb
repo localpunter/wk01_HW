@@ -1,3 +1,101 @@
-def total_cash
+def pet_shop_name(pet_shop)
+  return pet_shop[:name]
+
+end
+
+def total_cash(pet_shop)
+return pet_shop[:admin][:total_cash]
+
+end
+
+
+def add_or_remove_cash(pet_shop, cash)
+  pet_shop[:admin][:total_cash] += cash
+
+end
+
+def pets_sold(pet_shop)
+return pet_shop[:admin][:pets_sold]
+
+end
+
+def increase_pets_sold(pet_shop, sold)
+return pet_shop[:admin][:pets_sold] += sold
+
+end
+
+def stock_count(pet_shop)
+    total_stock = 0
+
+    for pets in pet_shop
+      total_stock += pets.count
+    end
+
+  return total_stock
+end
+
+def pets_by_breed(pet_shop, breed)
+    pets_by_breed = []
+
+    for pet in pet_shop[:pets]
+      pets_by_breed << pet if pet[:breed]==breed
+    end
+return pets_by_breed
+
+end
+
+def find_pet_by_name(pet_shop, name)
+    pet_by_name = []
+    for pet in pet_shop[:pets]
+      pet_by_name << pet if pet[:name]==name
+    end
+return pet_by_name
+
+end
+
+
+# def find_pet_by_name(pet_shop, name)
+#   pet_by_name = [:pets][:name]
+#   pet [:pets][:name].find(name)
+#   pet [:pets][:name].length
+# end
+
+def find_pet_by_name(pet_shop, name)
+  return name[:pet_shop][:pets]
+
+end
+
+def customer_cash(customers)
+return customers[:cash]
+#Not sure why this returns 1000 and not 1050 in the spec tab?
+end
+
+def remove_customer_cash(customers, cash)
+  customers[:cash] -= cash
+
+end
+
+def customer_pet_count(customers)
+  customers[:pets].count
+
+end
+
+def customer_pet_count(customers)
+  customers[:pets].length
+
+end
+
+
+
+def add_pet_to_customer(customers, new_pet)
+  customers[:pets]<< new_pet
+  customers[:pets].count
+
+end
+
+
+def add_pet_to_customer(customers, new_pet)
+  customers[:pets]<< new_pet
+  customers[:pets].length
 
 end
