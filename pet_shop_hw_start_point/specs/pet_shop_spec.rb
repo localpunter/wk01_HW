@@ -125,7 +125,7 @@ class TestPetShop < Minitest::Test
   #   pet = find_pet_by_name(@pet_shop, "Arthur")
   #   assert_equal("Arthur", pet[:name])
   # end
-
+  #
   # def test_find_pet_by_name__returns_nil
   #   pet = find_pet_by_name(@pet_shop, "Fred")
   #   assert_nil(pet)
